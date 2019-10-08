@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.utils import timezone
 
-from polls.models import Question
+from polls.models.question import *
 
 class QuestionIndexViewTests(TestCase):
     def test_no_questions(self):
@@ -47,7 +47,3 @@ class QuestionIndexViewTests(TestCase):
             response.context['latest_question_list'],
             ['<Question: ID: 2, question_text: Past question 2.>', '<Question: ID: 1, question_text: Past question 1.>']
         )
-
-def create_question(question_text, days):
-    time = timezone.now() + datetime.timedelta(days=days)
-    return Question.objects.create(question_text=question_text, pub_date=time)

@@ -2,6 +2,7 @@
 
 # from django.shortcuts import get_object_or_404, render
 from django.views import generic
+from django.utils import timezone
 from polls.models import Question
 
 # def detail(request, question_id):
@@ -14,3 +15,7 @@ from polls.models import Question
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
+
+    def get_queryset(self):
+
+        return Question.objects.filter(pub_date__lte=timezone.now())
