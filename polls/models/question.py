@@ -8,7 +8,7 @@ class Question(models.Model):
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
-        return 'ID: %s, question_text: %s, pub_date: %s' % (self.id, self.question_text, self.pub_date)
+        return 'ID: %s, question_text: %s' % (self.id, self.question_text)
 
     # practice examples below
 
