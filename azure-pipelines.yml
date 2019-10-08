@@ -1,0 +1,15 @@
+jobs:
+- job: 'Test'
+  pool:
+    vmImage: 'ubuntu-16.04'
+  strategy:
+    matrix:
+      Python36:
+        python.version: '3.6'
+
+  steps:
+  - task: PythonTest
+    inputs:
+      targetType: 'inline'
+      script: |
+        python manage.py test
