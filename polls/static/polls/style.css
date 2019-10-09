@@ -1,0 +1,108 @@
+body {
+    background: #DCDCDC;
+}
+
+* {
+    font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+li a {
+    font-size: 14px;
+    color: #313131;
+    display: flex;
+    padding: 5px;
+}
+
+ol {
+    font-size: 14px;
+    color: black;
+}
+
+.siderContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.questionBox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 30em;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 6px 6px 4px gray;
+    overflow: hidden;
+    display: block;
+}
+
+.headerBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color:  #D3D3D3;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.mainBox {
+    position: sticky;
+}
+
+.headerBox p {
+    font-size: 20px;
+    color: #313131;
+    margin: auto;
+    padding: 10px;
+}
+
+.siteContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.siteContent {
+    flex: 1;
+}
+
+.siteHeader {
+    padding: 20px;
+    background-color: orange;
+}
+
+.siteFooter {
+    background: linear-gradient(to bottom, #DCDCDC, silver);
+    padding: 20px 0;
+}
+
+.footerRightBox {
+    float: right;
+    text-align: right;
+    padding-right: 5vh;
+    font-size: 13px;
+}
+
+.siteHeader {
+    background: linear-gradient(to top, #DCDCDC, silver);
+    padding: 20px;
+}
+
+.headerLeftBox {
+    float: left;
+    padding-left: 5vh;
+    font-size: 20px;
+}
+
+.headerRightBox {
+    float: right;
+    text-align: right;
+    padding-right: 5vh;
+    font-size: 15px;
+}

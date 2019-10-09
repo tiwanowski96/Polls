@@ -1,9 +1,22 @@
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+    <div class="questionBox">
+        <div class="headerBox">
+            <p>Choose your question:</p>
+        </div> 
+        <div class="mainBox">
+            {% if latest_question_list %}
+                <ol>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ol>
+            {% else %}
+                <p>No polls are available.</p>
+            {% endif %}
+        </div>
+    </div>
+    
+{% endblock %}

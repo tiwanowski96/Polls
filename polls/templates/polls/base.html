@@ -1,0 +1,27 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+<body>
+    <div class="siteContainer">
+        <header class="siteHeader">
+            <div class="headerLeftBox">
+                POLLS Application
+            </div>
+            <div class="headerRightBox">
+                T.Iwanowski
+            </div>
+        </header>
+        <main class="siteContent">
+            <div class="siderContainer">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <footer class="siteFooter">
+            <div class="footerRightBox">
+                version: 0.0.1<br>09.10.2019r.
+            </div>
+        </footer>
+    </div>
+</body>
