@@ -25,14 +25,13 @@ jobs:
         # Python >= 3.6
         manage_py = next(iglob(path.join('**', 'manage.py'), recursive=True), None)
         if not manage_py:
-            raise SystemExit('Could not find a Django project')
+          raise SystemExit('Could not find a Django project')
         project_location = path.dirname(path.abspath(manage_py))
         print('Found Django project in', project_location)
         print('##vso[task.setvariable variable=projectRoot]{}'.format(project_location))
   - script: |
       python -m pip install --upgrade pip setuptools wheel django
       pip install -r myProject/requirements.txt
-      pip install unittest-xml-reporting
     displayName: 'Install prerequisites'
 
   - script: |
