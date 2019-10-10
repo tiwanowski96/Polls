@@ -14,9 +14,9 @@
                         <input class="vote" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
                         <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
                     {% endfor %}
-                    <dir class="submitInput">
+                    <div class="submitInput">
                         <input type="submit" value="Vote" name="vote">
-                    </dir>
+                    </div>
                 </form>
             </div>
         </div>

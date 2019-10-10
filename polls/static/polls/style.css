@@ -27,7 +27,7 @@ ol {
 }
 
 .siderContainer {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 
@@ -85,7 +85,7 @@ ol {
 .footerRightBox {
     float: right;
     text-align: right;
-    padding-right: 5vh;
+    padding-right: 3em;
     font-size: 13px;
     color: black;
 }
@@ -97,7 +97,7 @@ ol {
 
 .headerLeftBox {
     float: left;
-    padding-left: 5vh;
+    padding-left: 2em;
     font-size: 20px;
 }
 
@@ -113,7 +113,7 @@ ol {
 .headerRightBox {
     float: right;
     text-align: right;
-    padding-right: 5vh;
+    padding-right: 2em;
 }
 
 .mainBox label {
@@ -124,14 +124,15 @@ ol {
 }
 
 .voteBox {
-    margin: 3vh;
+    margin: 1em;
     width: 100%;
     height: 100%;
 }
 
 .submitInput {
     float: right;
-    padding-right: 6vh;
+    padding-right: 2em;
+    padding-bottom: 1em;
 }
 
 .submitInput input {
@@ -151,4 +152,47 @@ ol {
 .submitInput input:hover {
     background-color: rgb(221, 221, 221);
     transition: 0.5s;
+}
+
+.leftChoice {
+    float: left;
+    width: 14em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.rightScore {
+    float: right;
+    width: 14em;
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.results {
+    display: table-cell;
+    height: auto;
+    padding: 1em;
+}
+
+.again {
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #D3D3D3;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 185px;
+    margin-left: 185px;
+    width: 100px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5), 3px 3px 2px gray;
+
+}
+
+.again a {
+    color: #313131;
 }
