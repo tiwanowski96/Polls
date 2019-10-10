@@ -1,5 +1,6 @@
 body {
     background: #DCDCDC;
+    margin: 0px;
 }
 
 * {
@@ -72,11 +73,6 @@ ol {
     flex: 1;
 }
 
-.siteHeader {
-    padding: 20px;
-    background-color: orange;
-}
-
 .siteFooter {
     background: linear-gradient(to bottom, #DCDCDC, silver);
     padding: 20px 0;
@@ -87,6 +83,7 @@ ol {
     text-align: right;
     padding-right: 5vh;
     font-size: 13px;
+    color: black;
 }
 
 .siteHeader {
@@ -98,11 +95,37 @@ ol {
     float: left;
     padding-left: 5vh;
     font-size: 20px;
+    color: black;
+}
+
+.headerLeftBox a {
+    color: black;
 }
 
 .headerRightBox {
     float: right;
     text-align: right;
     padding-right: 5vh;
-    font-size: 15px;
+}
+
+.mainBox label {
+    font-size: 14px;
+    line-height: 200%;
+    color: #313131;
+    padding: 5px;
+}
+
+.voteBox {
+    margin: 3vh;
+    width: 100%;
+    height: 100%;
+}
+
+.submitInput {
+    float: right;
+    padding-right: 6vh;
+}
+
+.mainBox p {
+    color: red;
 }
