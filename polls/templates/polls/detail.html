@@ -1,7 +1,6 @@
 {% extends 'polls/base.html' %}
 
 {% block content %}
-
     <div class="questionBox">
         <div class="headerBox">
             <p>{{ question.question_text }}</p>
@@ -9,14 +8,14 @@
         <div class="voteBox">
             <div class="mainBox">
                 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-                <form action="{% url 'polls:vote' question.id %}" method="post">
+                <form action="{% url 'polls:vote' question.id %}" method="post" name="poll">
                     {% csrf_token %}
                     {% for choice in question.choice_set.all %}
                         <input class="vote" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
                         <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
                     {% endfor %}
                     <dir class="submitInput">
-                        <input type="submit" value="Vote">
+                        <input type="submit" value="Vote" name="vote">
                     </dir>
                 </form>
             </div>
